@@ -1,15 +1,18 @@
 # IT LIVES
+
 from itertools import groupby
 
 with open("input.txt") as f:
-    #Primero tengo que convertir los strings a int antes de que se metan en lista de listas porque si no, no se puede luego.
     data = f.read().splitlines()
-    enNumeros = [ int(x) for x in data.split() ] 
-# result = [list(v) for k,v in groupby(data, key=str.isdigit)] - Convierte a lista de listas.
+    result = [list(v) for k,v in groupby(data, key=str.isdigit)] #-Convierte a lista de listas.
+    # Busco filtrar de la nested list las listas vacias
+    # listaSinVacias = list(filter(lambda x: x != '\n', result))
+    # Para luego poder usar la funcion de abajo que convierte los strings a enteros
+    #nuevaLista = [int(g) for g in data]
 
-print(enNumeros)
+print(listaSinVacias)
 
-"""
+""" # Para la suma
 # Python3 program to Column wise sum of nested list
  
 def column_sum(lst):
