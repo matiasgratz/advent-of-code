@@ -21,4 +21,4 @@ with open("input.txt", 'r') as archivo:
 
 # Imprimir la lista resultante
 # Mapeo a una lista nueva, convierto previamente en int, y sumo.
-print("Lista con el primer y último número de cada línea:",  sum(map(int, resultados)))
+print("Lista con el primer y último número de cada línea, sumado:",  sum(map(int, resultados)))
